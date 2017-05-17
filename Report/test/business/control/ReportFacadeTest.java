@@ -38,7 +38,7 @@ public class ReportFacadeTest {
     }
 
     /**
-     * Tests the result of most compared data after request with the mock data.
+     * Tests the result of favorite data after request with the mock data.
      */
     @Test
     public void matchFavoriteDataWithMockData() {
