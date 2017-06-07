@@ -12,7 +12,7 @@ import com.google.android.gms.common.SignInButton;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 /**
- * Created by mz on 06/06/17.
+ * Created on 06/06/17.
  * <p>
  * Authentication with Google APi.
  */

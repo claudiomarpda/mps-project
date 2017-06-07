@@ -13,16 +13,20 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
 
     private TextView mTextView;
+    private FacebookAuth facebookAuth;
     private GoogleAuth googleAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        facebookAuth = new FacebookAuth(getApplicationContext());
+
         setContentView(R.layout.activity_main);
         mTextView = (TextView) findViewById(R.id.my_text);
         final View view = this.findViewById(android.R.id.content);
 
+        facebookAuth.setButtonListener(view);
         googleAuth = new GoogleAuth(this);
         googleAuth.setButtonListener(view);
     }
