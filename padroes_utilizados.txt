@@ -1,22 +1,29 @@
 Aplicação Android: Singleton, Adapter, Factory e Template Method.
-Aplicação de relatórios: Java: Facade e Command.
+Aplicação de relatórios Java: Facade e Command.
 
 Padrão Singleton
-	É utilizado na classe business.control.Datasingleton para permitir acesso à dados que são utilizados em diferentes classes do programa, além de iniciar dados uma única vez.
+	É utilizado na classe business/control/Datasingleton para permitir acesso à dados que são utilizados em diferentes classes do programa, além de iniciar dados uma única vez.
 
 Padrão Adapter
 	O padrão adapter é aplicado ao banco de dados, o que permite maior flexibilidade caso a fonte dos dados mude. As classes utilizadas são DatabaseTarget e Database Adapter e se encontram no pacote util.
 
 Padrão Template Method
 	Aplicado ao modo como são exibidas listas de itens com a classe RecyclerView do Android, onde em cada classe que extende o modelo inicia o adaptador correspondente.
-	As classes se encontram no pacote business.control.fragment e são: TemplateRecyclerFragment, BikeRecyclerFragment, BrandRecyclerFragment, DisplacementRecyclerFragment e StyleRecyclerFragment.
+	As classes se encontram no pacote business/control/fragment e são: TemplateRecyclerFragment, BikeRecyclerFragment, BrandRecyclerFragment, DisplacementRecyclerFragment e StyleRecyclerFragment.
+	Utilizado também na classe ComparisonTextView com o padrão Observer, encontra-se em business/control/comparison.
 
 Padrão Factory
 	util.BikeFactory é utilizada para instanciar motocicletas.
 	infra.CSVFactory faz leitura de um arquivo CSV que contém todos os dados de motocicletas utilizados na aplicação.
 
 Padrão Facade
-	Em business.control.ReportFacade permite acesso as principais funcionalidades de requisição ao servidor de dados estatísticos para emissão de relatórios.
+	Em business/control/ReportFacade permite acesso as principais funcionalidades de requisição ao servidor de dados estatísticos para emissão de relatórios.
 
 Padrão Command
-	Encapsula os comandos que obtém os dados de relatórios. Encontram-se em business.control as classes ReportCommand, ReportInvoker, FavoriteCommand, MostComparedCommand, MostViewedCommand e ReportConnection. 
+	Encapsula os comandos que obtém os dados de relatórios. Encontram-se em business/control as classes ReportCommand, ReportInvoker, FavoriteCommand, MostComparedCommand, MostViewedCommand e ReportConnection. 
+
+Padrão Memento
+	Encapsula momentos da aplicação de modo que permite voltar para etapas anteriores. Foi utilizado para memorizar cada comparação feita pelo usuário, onde cada seleção da opção voltar, volta um momento e atualiza a interface com o padrõo Observer. As classes utilizadas encontram-se em business/control/comparison, que são: ComparisonMemento e ComparisonCareTaker. 
+
+Padrão Observer
+	Notifica objetos observadores sempre que o dado no notificador é atualizado. É utilizado com o padrão Memento conforme descrito anteriormente. As classes utilizadas encontram-se em business/control/comparison, que são: ComparisonButton, ComparisonTextView, LeftComparisonButton, RightComparisonButton, LeftComparisonTextView, RightComparisonTextView, ComparisonObserver e ComparisonSubject. 
