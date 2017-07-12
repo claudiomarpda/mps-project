@@ -1,4 +1,4 @@
-Aplicação Android: Singleton, Adapter, Factory e Template Method.
+Aplicação Android: Singleton, Adapter, Factory, Template Method, Memento e Observer.
 Aplicação de relatórios Java: Facade e Command.
 
 Padrão Singleton
